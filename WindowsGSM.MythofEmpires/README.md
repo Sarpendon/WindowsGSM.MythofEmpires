@@ -1,14 +1,8 @@
-# WindowsGSM.LastOasis
-🧩WindowsGSM plugin that provides Last Oasis Dedicated server support!
+# WindowsGSM.MythofEMpires
+🧩WindowsGSM plugin that provides Myth of Empires Dedicated server support!
 
 # The Game
-https://store.steampowered.com/app/903950/Last_Oasis/
+https://store.steampowered.com/app/1371580/Myth_of_Empires/
 
 # Requirements
 WindowsGSM >= 1.21.0
-
-# Documentation 
-https://docs.google.com/document/d/e/2PACX-1vTk67puClDitrjLeAT3NrkgGQAUD2ZWSgVkj_NUAbmT-rBa4Tejx4uY7_-4Gpn_swNKIMjoS-g7255O/pub
-
-# Last Oasis - My Realm - Dashboard
-https://myrealm.lastoasis.gg/Account/SignIn?ReturnUrl=%2F
