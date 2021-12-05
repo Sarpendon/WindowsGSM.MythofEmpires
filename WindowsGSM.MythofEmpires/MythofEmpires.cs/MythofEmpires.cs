@@ -42,11 +42,11 @@ namespace WindowsGSM.Plugins
 
 
         // - Game server default values
-        public string Port = "5555"; // Default port
-        public string QueryPort = "27015"; // Default query port
+        public string Port = "7777"; // Default port
+        public string QueryPort = "7778"; // Default query port
         public string Defaultmap = "LargeTerrain_Central_Main"; // Used for Server ID
         public string Maxplayers = "100"; // Default maxplayers
-        public string Additional = " -game -server -DataLocalFile -log log=19259.log -LOCALLOGTIMES -PrivateServer -disable_qim -SessionName=Sarpendon_MOE_19259 -GameServerPVPType=1 -MapDifficultyRate=1 -UseBatEye -ForceSteamNet -ServerId=100 -ClusterId=1 -ServerAdminAccounts=76561198095468380"; // Additional server start parameter
+        public string Additional = " -game -server -DataLocalFile -log log=123456.log -LOCALLOGTIMES -PrivateServer -disable_qim -SessionName=MyNewServer -GameServerPVPType=1 -MapDifficultyRate=1 -UseBatEye -ForceSteamNet -ServerId=100 -ClusterId=1 -ServerAdminAccounts=123456"; // Additional server start parameter
 
 
         // - Create a default cfg for the game server after installation
