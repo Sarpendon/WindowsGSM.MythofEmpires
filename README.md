@@ -8,6 +8,7 @@ https://store.steampowered.com/app/1371580/Myth_of_Empires/
 WindowsGSM >= 1.21.0
 
 # IMPORTANT INFO
+- Don't forget to add your steam user credentials before installing the Server and Send the SteamGuard Token if necessary.
 - After installation change the log=123456.log to an random number or generate a number from the "PrivateServerTool".
 - Change -SessionName=MyNewServer to what ever your Server should show up in the Server List.
 - To give yourself and/or others Admin acces add the Steam ID's after -ServerAdminAccounts=XXXXXXXXXXXXXXXXXX and separate with ";" if there are multiple admins.
