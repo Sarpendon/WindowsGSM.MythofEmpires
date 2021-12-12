@@ -14,6 +14,8 @@ WindowsGSM >= 1.21.0
 - To give yourself and/or others Admin acces add the Steam ID's after -ServerAdminAccounts=XXXXXXXXXXXXXXXXXX and separate with ";" if there are multiple admins.
 
 # Other Server Settings:
+I made a list of all Server Parameters and a Spreadsheet to easaly copy and paste a string to your Server.
+https://docs.google.com/spreadsheets/d/1xTy0iQzI6utIqVBSQ4IIOjIyrAeDzLyYpGUVKbjwudY/edit#gid=1781338141
 You can add,change or delete certain Server settings here are some examples:
 - -GameServerPVPType=1 (0=PVP 1=PVE)
 - -UseBatEye (Will enable BattleEye)
