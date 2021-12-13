@@ -8,7 +8,7 @@
 2. Download this Plugin as .zip container and don't unpack it.
 3. Create a Folder at a Location you wan't all Server to be Installed and Run.
 4. Drag WindowsGSM.Exe into previoulsy created folder and execute it.
-5. Press on the Puzzle Icon in the left bottom side and install this plugin buy navigating to it and select the Zip File.
+5. Press on the Puzzle Icon in the left bottom side and install this plugin by navigating to it and select the Zip File.
 6. Wait a couple of seconds then close the plugin menu and install the game server.
 
 # The Game
