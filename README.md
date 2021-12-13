@@ -11,17 +11,19 @@
 5. Press on the Puzzle Icon in the left bottom side and install this plugin by navigating to it and select the Zip File.
 6. Wait a couple of seconds then close the plugin menu and install the game server.
 
+
 # The Game
 🕹️ https://store.steampowered.com/app/1371580/Myth_of_Empires/
 
 # Requirements
 🖥️ WindowsGSM >= 1.21.0
 
-# IMPORTANT INFO
+# IMPORTANT INFO / Troubleshooting
 - Don't forget to add your steam user credentials before installing the Server and Send the SteamGuard Token if necessary.
 - After installation change the log=123456.log to an random number or generate a number from the "PrivateServerTool".
 - Change -SessionName=MyNewServer to what ever your Server should show up in the Server List.
 - To give yourself and/or others Admin acces add the Steam ID's after -ServerAdminAccounts=XXXXXXXXXXXXXXXXXX and separate with ";" if there are multiple admins.
+- In case of Error Code 8 or 7 just retry the installation, somethimes it needs several attempts to install properly.
 
 # Other Server Settings:
 I made a list of all Server Parameters and a Spreadsheet to easaly copy and paste a string to your Server.
