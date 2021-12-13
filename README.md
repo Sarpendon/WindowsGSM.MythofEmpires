@@ -1,9 +1,9 @@
 # WindowsGSM.MythofEmpires
 🧩 WindowsGSM plugin that provides Myth of Empires Dedicated server support!
 
-To be used with https://windowsgsm.com/ 
+🖥️ To be used with https://windowsgsm.com/ 
 
-Basic Installation:
+🛠️ Basic Installation: 
 1. Download  WindowsGSM from the Link above.
 2. Download this Plugin as .zip container and don't unpack it.
 3. Create a Folder at a Location you wan't all Server to be Installed and Run.
@@ -12,10 +12,10 @@ Basic Installation:
 6. Wait a couple of seconds then close the plugin menu and install the game server.
 
 # The Game
-https://store.steampowered.com/app/1371580/Myth_of_Empires/
+🕹️ https://store.steampowered.com/app/1371580/Myth_of_Empires/
 
 # Requirements
-WindowsGSM >= 1.21.0
+🖥️ WindowsGSM >= 1.21.0
 
 # IMPORTANT INFO
 - Don't forget to add your steam user credentials before installing the Server and Send the SteamGuard Token if necessary.
@@ -26,6 +26,6 @@ WindowsGSM >= 1.21.0
 # Other Server Settings:
 I made a list of all Server Parameters and a Spreadsheet to easaly copy and paste a string to your Server.
 
-https://docs.google.com/spreadsheets/d/1xTy0iQzI6utIqVBSQ4IIOjIyrAeDzLyYpGUVKbjwudY/edit?usp=sharing
+📄 https://docs.google.com/spreadsheets/d/1xTy0iQzI6utIqVBSQ4IIOjIyrAeDzLyYpGUVKbjwudY/edit?usp=sharing
 
 You can find all other Server Settings in the "PrivateServerTool" and try around for yourself but it seems that not all Settings work or take affect.
