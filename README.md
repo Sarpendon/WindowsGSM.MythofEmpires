@@ -1,5 +1,15 @@
 # WindowsGSM.MythofEmpires
-🧩WindowsGSM plugin that provides Myth of Empires Dedicated server support!
+🧩 WindowsGSM plugin that provides Myth of Empires Dedicated server support!
+
+To be used with https://windowsgsm.com/ 
+
+Basic Installation:
+1. Download  WindowsGSM from the Link above.
+2. Download this Plugin as .zip container and don't unpack it.
+3. Create a Folder at a Location you wan't all Server to be Installed and Run.
+4. Drag WindowsGSM.Exe into previoulsy created folder and execute it.
+5. Press on the Puzzle Icon in the left bottom side and install this plugin buy navigating to it and select the Zip File.
+6. Wait a couple of seconds then close the plugin menu and install the game server.
 
 # The Game
 https://store.steampowered.com/app/1371580/Myth_of_Empires/
@@ -16,26 +26,4 @@ WindowsGSM >= 1.21.0
 # Other Server Settings:
 I made a list of all Server Parameters and a Spreadsheet to easaly copy and paste a string to your Server.
 https://docs.google.com/spreadsheets/d/1xTy0iQzI6utIqVBSQ4IIOjIyrAeDzLyYpGUVKbjwudY/edit#gid=1781338141
-You can add,change or delete certain Server settings here are some examples:
-- -GameServerPVPType=1 (0=PVP 1=PVE)
-- -UseBatEye (Will enable BattleEye)
-- -ForceSteamNet (Will enable Steam P2P Network)
-- -Description="Text" (Will add a Server description but keep it short)
-- -NoticeSelfEnable=true (Enables/Disables welcome message)
-- -NoticeSelfEnterServer="Write here your Welcome Message!"
-- -NoticeAllEnable=true (Enables/Disables join and leave message)
-- -NoticeEnterServer=" has joined" (joining Message)
-- -NoticeLeaveServer=" has left!" (leaving Message)
-- -SaveGameIntervalMinute=5 (Server Save Intervall)
-- -InitCapitalCopper=1000 (Starting Coins for new Players)
-- -NormalReduceDurableMultiplier=1 (Durability Multipler for Tools/Weapons/Armors while using or getting damaged.
-- -NUM_AllGeneralMax=10 (Amount of Warrior a Player can recruit)
-- -NUM_WarGeneralMax=5 (Amount of Warriors a Player can lead at once)
-- -bLimitTameHorseNum=true (Enables/Disables the Limit for tamed Mounts)
-- -bLimitWarHorseNum=false (Enables/Disables the Limit for hourses outside of the Stable)
-- -SkillExpMultiplier=1
-- -AddExpMultiplier=1
-- -PlayerCollectionExpMultiplier=1
-- -PlayerKillMonstersExpMultiplier=1
-
 You can find all other Server Settings in the "PrivateServerTool" and try around for yourself but it seems that not all Settings work or take affect.
