@@ -26,6 +26,6 @@ WindowsGSM >= 1.21.0
 # Other Server Settings:
 I made a list of all Server Parameters and a Spreadsheet to easaly copy and paste a string to your Server.
 
-https://docs.google.com/spreadsheets/d/1xTy0iQzI6utIqVBSQ4IIOjIyrAeDzLyYpGUVKbjwudY/edit#gid=1781338141
+https://docs.google.com/spreadsheets/d/1xTy0iQzI6utIqVBSQ4IIOjIyrAeDzLyYpGUVKbjwudY/edit?usp=sharing
 
 You can find all other Server Settings in the "PrivateServerTool" and try around for yourself but it seems that not all Settings work or take affect.
