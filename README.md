@@ -1,7 +1,7 @@
 # WindowsGSM.MythofEmpires
 🧩 WindowsGSM plugin that provides Myth of Empires Dedicated server support!
 
-🖥️ To be used with https://windowsgsm.com/ 
+🏷️ To be used with https://windowsgsm.com/ 
 
 🛠️ Basic Installation: 
 1. Download  WindowsGSM from the Link above.
