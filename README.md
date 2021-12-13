@@ -3,7 +3,7 @@
 
 🏷️ To be used with https://windowsgsm.com/ 
 
-🛠️ Basic Installation: 
+# Basic Installation: 
 1. Download  WindowsGSM from the Link above.
 2. Download this Plugin as .zip container and don't unpack it.
 3. Create a Folder at a Location you wan't all Server to be Installed and Run.
