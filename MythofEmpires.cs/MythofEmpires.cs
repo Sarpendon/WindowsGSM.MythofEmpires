@@ -18,7 +18,7 @@ namespace WindowsGSM.Plugins
             name = "WindowsGSM.MythofEmpires", // WindowsGSM.XXXX
             author = "Sarpendon",
             description = "WindowsGSM plugin for supporting Myth of Empires Dedicated Server",
-            version = "1.3",
+            version = "1.4",
             url = "https://github.com/dkdue/WindowsGSM.MythofEmpires", // Github repository link (Best practice)
             color = "#34c9eb" // Color Hex
         };
@@ -151,6 +151,15 @@ namespace WindowsGSM.Plugins
                 }
             });
 			await Task.Delay(20000);
+        }
+
+// fixes WinGSM bug, https://github.com/WindowsGSM/WindowsGSM/issues/57#issuecomment-983924499
+        public async Task<Process> Update(bool validate = false, string custom = null)
+        {
+            var (p, error) = await Installer.SteamCMD.UpdateEx(serverData.ServerID, AppId, validate, custom: custom, loginAnonymous: loginAnonymous);
+            Error = error;
+            await Task.Run(() => { p.WaitForExit(); });
+            return p;
         }
 
     }
