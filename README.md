@@ -31,12 +31,10 @@
 
 > [!CAUTION]
 > Keep in mind to use quotes around texts that have spaces inbetween for example:
+>:white_check_mark: -Description="My Server is Awesome!"
+>and not 
+>:red_circle: -Description=My Server is Awesome!
 
-:white_check_mark: -Description="My Server is Awesome!"
-
-and not 
-
-:red_circle: -Description=My Server is Awesome!
 > [!TIP]
 > To give yourself and/or others Admin acces add the Steam ID's after -ServerAdminAccounts=XXXXXXXXXXXXXXXXXX and separate with ";" if there are multiple admins.
 
@@ -58,5 +56,7 @@ and not
 | `-NoticeLeaveServer=` | Leaving Message | -NoticeLeaveServer=" has left the Server" |
 | `-SaveGameIntervalMinute=` | Server Save Intervall in Minutes | -SaveGameIntervalMinute=10 |
 
+> [!NOTE]
+>For more Settings use this Spreadsheet: https://docs.google.com/spreadsheets/d/1xTy0iQzI6utIqVBSQ4IIOjIyrAeDzLyYpGUVKbjwudY/edit?usp=sharing
 
 You can find all other Server Settings in the "PrivateServerTool" and try around for yourself but it seems that not all Settings work or take affect.
