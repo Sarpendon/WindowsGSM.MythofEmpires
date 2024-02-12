@@ -21,7 +21,8 @@
 # IMPORTANT INFO / Troubleshooting / Basic Server Settings:
 ![alt text](https://i.imgur.com/vXZVL4x.png)
 
-- Server Name: Fill in the Name of your Server in this Section
+- # Server Name:
+Fill in the Name of your Server in this Section
 - Server IP Adress: Local IP of your Server there is no need to change this GSM should get the right IP adress itself
 - Server Port: Game Port of the Server
 - Server Query Port: Is actually the RCON Port of the Server
