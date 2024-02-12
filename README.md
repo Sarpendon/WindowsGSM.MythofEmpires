@@ -19,7 +19,23 @@
 🖥️ WindowsGSM >= 1.21.0
 
 # IMPORTANT INFO / Troubleshooting / Basic Server Settings:
-![alt text](https://i.imgur.com/KIiizY9.png)
+![alt text](https://i.imgur.com/vXZVL4x.png)
+
+Server Name: Fill in the Name of your Server in this Section
+Server IP Adress: Local IP of your Server there is no need to change this GSM should get the right IP adress itself
+Server Port: Game Port of the Server
+Server Query Port: Is actually the RCON Port of the Server
+Server Maxplayer: Maximum Number of Players on your Server
+Server Start Map: Enter the Name of the Map the Server should start. If there will be more maps in the future you can change them here.
+Server GSLT: If you want to have a Server Password enter it here or leave empty for no Server Password!
+Server Start Param: Some Parameter are already filled in by default you can add or remove them as you wish! Keep in mind to use quotes around texts that have spaces inbetween for example: 
+
+:white_check_mark: -Description="My Server is Awesome!" 
+
+and not 
+
+:red_circle: -Description=My Server is Awesome!
+
 - To give yourself and/or others Admin acces add the Steam ID's after -ServerAdminAccounts=XXXXXXXXXXXXXXXXXX and separate with ";" if there are multiple admins.
 
 
