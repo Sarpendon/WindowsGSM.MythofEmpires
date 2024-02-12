@@ -43,10 +43,9 @@ and not
 > To give yourself and/or others Admin acces add the Steam ID's after -ServerAdminAccounts=XXXXXXXXXXXXXXXXXX and separate with ";" if there are multiple admins.
 
 # Other Server Settings:
-I made a list of all Server Parameters and a Spreadsheet to easaly copy and paste a string to your Server.
-
-Be sure to check the second Tab in the Spreadsheet for the copy&paste output for either WindowsGSM or the ServerStart.bat
-
-📄 https://docs.google.com/spreadsheets/d/1xTy0iQzI6utIqVBSQ4IIOjIyrAeDzLyYpGUVKbjwudY/edit?usp=sharing
+| Server Start Param| Description | Default Value |
+| --- | --- | --- |
+| `git status` | List all *new or modified* files |
+| `git diff` | Show file differences that **haven't been** staged |
 
 You can find all other Server Settings in the "PrivateServerTool" and try around for yourself but it seems that not all Settings work or take affect.
