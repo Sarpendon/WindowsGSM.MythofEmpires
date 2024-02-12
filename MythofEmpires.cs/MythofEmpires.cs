@@ -36,7 +36,7 @@ namespace WindowsGSM.Plugins
         // - Game server Fixed variables
         public override string StartPath => @"MOE\Binaries\Win64\MOEServer.exe"; // Game server start path
         public string FullName = "Myth of Empires Dedicated Server"; // Game server FullName
-        public bool AllowsEmbedConsole = false;  // Does this server support output redirect?
+        public bool AllowsEmbedConsole = true;  // Does this server support output redirect?
         public int PortIncrements = 2; // This tells WindowsGSM how many ports should skip after installation
         public object QueryMethod = new A2S(); // Query method should be use on current server type. Accepted value: null or new A2S() or new FIVEM() or new UT3()
 
@@ -46,7 +46,7 @@ namespace WindowsGSM.Plugins
         public string QueryPort = "7779"; // Default query port
         public string Defaultmap = "LargeTerrain_Central_Main"; // Used for Server ID
         public string Maxplayers = "100"; // Default maxplayers
-        public string Additional = " log=123456.log -GameServerPVPType=1 -MapDifficultyRate=1 -UseBatEye -ForceSteamNet -ServerId=100 -ClusterId=1 -ServerAdminAccounts=123456 -Description=please_use_quotation_marks_around_text "; // Additional server start parameter
+        public string Additional = " -ServerId=100 -ClusterId=1 -ServerAdminAccounts=insert_steam_id_here -Description=please_use_quotation_marks_around_text -SaveGameIntervalMinute=10 "; // Additional server start parameter
 
 
         // - Create a default cfg for the game server after installation
@@ -65,20 +65,23 @@ namespace WindowsGSM.Plugins
 
 
 
+
             string shipExePath = Functions.ServerPath.GetServersServerFiles(_serverData.ServerID, StartPath);
 
             // Prepare start parameter
 			string param = $""; // Set basic parameters
 			param += string.IsNullOrWhiteSpace(_serverData.ServerMap) ? string.Empty : $" {_serverData.ServerMap}";
-			param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $" -game -server -DataLocalFile -log -LOCALLOGTIMES -PrivateServer -disable_qim";
-			param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $" {_serverData.ServerParam}";
-			param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $" -SessionName={_serverData.ServerName}";
-			param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $" -PrivateServerPassword={_serverData.ServerGSLT}";
+			param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $" -game -server -DataLocalFile -log log={_serverData.ServerPort}.log -LOCALLOGTIMES -PrivateServer -disable_qim";
 			param += string.IsNullOrWhiteSpace(_serverData.ServerIP) ? string.Empty : $" -MultiHome={_serverData.ServerIP}";
 			param += string.IsNullOrWhiteSpace(_serverData.ServerIP) ? string.Empty : $" -OutAddress={externalIp.ToString()}";
+			param += string.IsNullOrWhiteSpace(_serverData.ServerPort) ? string.Empty : $" -pakdir=*\'..\\WindowsPrivateServer\\MOE\\{_serverData.ServerPort}Mods\'*";
+			param += string.IsNullOrWhiteSpace(_serverData.ServerName) ? string.Empty : $" -SessionName=\"{_serverData.ServerName}\"";
+			param += string.IsNullOrWhiteSpace(_serverData.ServerGSLT) ? string.Empty : $" -PrivateServerPassword={_serverData.ServerGSLT}";
 			param += string.IsNullOrWhiteSpace(_serverData.ServerMaxPlayer) ? string.Empty : $" -MaxPlayers={_serverData.ServerMaxPlayer}";
 			param += string.IsNullOrWhiteSpace(_serverData.ServerPort) ? string.Empty : $" -Port={_serverData.ServerPort}"; 
 			param += string.IsNullOrWhiteSpace(_serverData.ServerQueryPort) ? string.Empty : $" -ShutDownServicePort={_serverData.ServerQueryPort}";
+			param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $" {_serverData.ServerParam}";
+
 
 
             // Prepare Process
@@ -137,23 +140,14 @@ namespace WindowsGSM.Plugins
 
 
 		// - Stop server function
-        public async Task Stop(Process p)
+     public async Task Stop(Process p)
         {
             await Task.Run(() =>
             {
-                if (p.StartInfo.CreateNoWindow)
-                {
-                    Functions.ServerConsole.SetMainWindow(p.MainWindowHandle);
-                    Functions.ServerConsole.SendWaitToMainWindow("^c");
-					
-                }
-                else
-                {
-                    Functions.ServerConsole.SetMainWindow(p.MainWindowHandle);
-                    Functions.ServerConsole.SendWaitToMainWindow("^c");
-                }
+                Functions.ServerConsole.SetMainWindow(p.MainWindowHandle);
+                Functions.ServerConsole.SendWaitToMainWindow("^c");
+                p.WaitForExit(20000);
             });
-			await Task.Delay(20000);
         }
 
 // fixes WinGSM bug, https://github.com/WindowsGSM/WindowsGSM/issues/57#issuecomment-983924499
