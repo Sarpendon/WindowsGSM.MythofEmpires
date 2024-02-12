@@ -18,7 +18,7 @@ namespace WindowsGSM.Plugins
             name = "WindowsGSM.MythofEmpires", // WindowsGSM.XXXX
             author = "Sarpendon",
             description = "WindowsGSM plugin for supporting Myth of Empires Dedicated Server",
-            version = "1.6",
+            version = "1.7",
             url = "https://github.com/dkdue/WindowsGSM.MythofEmpires", // Github repository link (Best practice)
             color = "#AD2D89" // Color Hex
         };
@@ -46,7 +46,7 @@ namespace WindowsGSM.Plugins
         public string QueryPort = "7779"; // Default query port
         public string Defaultmap = "LargeTerrain_Central_Main"; // Used for Server ID
         public string Maxplayers = "100"; // Default maxplayers
-        public string Additional = " log=123456.log -GameServerPVPType=1 -MapDifficultyRate=1 -UseBatEye -ForceSteamNet -ServerId=100 -ClusterId=1 -ServerAdminAccounts=123456 -Description="gdfgsergdfg" "; // Additional server start parameter
+        public string Additional = " log=123456.log -GameServerPVPType=1 -MapDifficultyRate=1 -UseBatEye -ForceSteamNet -ServerId=100 -ClusterId=1 -ServerAdminAccounts=123456 -Description=please_use_quotation_marks_around_text "; // Additional server start parameter
 
 
         // - Create a default cfg for the game server after installation
