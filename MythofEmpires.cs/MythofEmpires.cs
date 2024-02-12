@@ -18,8 +18,8 @@ namespace WindowsGSM.Plugins
             name = "WindowsGSM.MythofEmpires", // WindowsGSM.XXXX
             author = "Sarpendon",
             description = "WindowsGSM plugin for supporting Myth of Empires Dedicated Server",
-            version = "1.8",
-            url = "https://github.com/dkdue/WindowsGSM.MythofEmpires", // Github repository link (Best practice)
+            version = "1.9",
+            url = "https://github.com/Sarpendon/WindowsGSM.MythofEmpires", // Github repository link (Best practice)
             color = "#AD2D89" // Color Hex
         };
 
@@ -141,14 +141,16 @@ namespace WindowsGSM.Plugins
 
 		// - Stop server function
      public async Task Stop(Process p)
-        {
-            await Task.Run(() =>
-            {
-                Functions.ServerConsole.SetMainWindow(p.MainWindowHandle);
-                Functions.ServerConsole.SendWaitToMainWindow("^c");
-                p.WaitForExit(20000);
-            });
-        }
+		{
+			await Task.Run(() =>
+			{
+				Functions.ServerConsole.SetMainWindow(p.MainWindowHandle);
+				Functions.ServerConsole.SendWaitToMainWindow("SaveGame"); // Execute SaveGame command
+				System.Threading.Thread.Sleep(10000); // Wait for 10 seconds (in milliseconds)
+				Functions.ServerConsole.SendWaitToMainWindow("^c"); // Send Ctrl+C command
+				p.WaitForExit(10000);
+			});
+		}
 
 // fixes WinGSM bug, https://github.com/WindowsGSM/WindowsGSM/issues/57#issuecomment-983924499
         public async Task<Process> Update(bool validate = false, string custom = null)
