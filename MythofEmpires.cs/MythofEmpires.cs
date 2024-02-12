@@ -18,7 +18,7 @@ namespace WindowsGSM.Plugins
             name = "WindowsGSM.MythofEmpires", // WindowsGSM.XXXX
             author = "Sarpendon",
             description = "WindowsGSM plugin for supporting Myth of Empires Dedicated Server",
-            version = "1.7",
+            version = "1.8",
             url = "https://github.com/dkdue/WindowsGSM.MythofEmpires", // Github repository link (Best practice)
             color = "#AD2D89" // Color Hex
         };
