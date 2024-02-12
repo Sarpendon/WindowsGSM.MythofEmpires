@@ -18,10 +18,8 @@
 # Requirements
 🖥️ WindowsGSM >= 1.21.0
 
-# IMPORTANT INFO / Troubleshooting / Basic Server Settings:
-![alt text](https://i.imgur.com/vXZVL4x.png)
-
-- **Server Name:** *Fill in the Name of your Server in this Section*
+> [!IMPORTANT]
+>- **Server Name:** *Fill in the Name of your Server in this Section*
 - **Server IP Adress:** *Local IP of your Server there is no need to change this GSM should get the right IP adress itself*
 - **Server Port:** *Game Port of the Server*
 - **Server Query Port:** *Is actually the RCON Port of the Server*
@@ -37,7 +35,7 @@ and not
 :red_circle: -Description=My Server is Awesome!
 
 - To give yourself and/or others Admin acces add the Steam ID's after -ServerAdminAccounts=XXXXXXXXXXXXXXXXXX and separate with ";" if there are multiple admins.
-
+![alt text](https://i.imgur.com/vXZVL4x.png)
 
 # Other Server Settings:
 I made a list of all Server Parameters and a Spreadsheet to easaly copy and paste a string to your Server.
