@@ -45,7 +45,7 @@ and not
 # Other Server Settings:
 | Server Start Param| Description | Default Value |
 | --- | --- | --- |
-| `git status` | List all *new or modified* files |
-| `git diff` | Show file differences that **haven't been** staged |
+| `-ServerId=` | Id of the Server itself | 100 |
+| `-ClusterId=` | ID of the Cluster the Server belongs to | 1 |
 
 You can find all other Server Settings in the "PrivateServerTool" and try around for yourself but it seems that not all Settings work or take affect.
