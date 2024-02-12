@@ -12,10 +12,10 @@
 6. Wait a couple of seconds then close the plugin menu and install the game server.
 
 
-# The Game
+# The Game:
 🕹️ https://store.steampowered.com/app/1371580/Myth_of_Empires/
 
-# Requirements
+# Requirements:
 🖥️ WindowsGSM >= 1.21.0
 
 # Server Settings:
@@ -29,7 +29,7 @@
 >- **Server GSLT:** *If you want to have a Server Password enter it here or leave empty for no Server Password!*
 >- **Server Start Param:** *Some Parameter are already filled in by default you can add or remove them as you wish! 
 
-
+![alt text](https://i.imgur.com/vXZVL4x.png)
 
 > [!CAUTION]
 > Keep in mind to use quotes around texts that have spaces inbetween for example:
@@ -39,9 +39,8 @@
 and not 
 
 :red_circle: -Description=My Server is Awesome!
-
-- To give yourself and/or others Admin acces add the Steam ID's after -ServerAdminAccounts=XXXXXXXXXXXXXXXXXX and separate with ";" if there are multiple admins.
-![alt text](https://i.imgur.com/vXZVL4x.png)
+> [!TIP]
+> To give yourself and/or others Admin acces add the Steam ID's after -ServerAdminAccounts=XXXXXXXXXXXXXXXXXX and separate with ";" if there are multiple admins.
 
 # Other Server Settings:
 I made a list of all Server Parameters and a Spreadsheet to easaly copy and paste a string to your Server.
