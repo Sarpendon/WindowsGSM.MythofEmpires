@@ -51,7 +51,12 @@ and not
 | `-NoticeSelfEnterServer=` | Welcome text when joining the Server | NoticeSelfEnterServer="Welcome to my Server!" |
 | `-MapDifficultyRate=` | Strength & HP of NPC's and Animals | -MapDifficultyRate=1 |
 | `-ServerAdminAccounts=` | Steam ID of Admin Players | -ServerAdminAccounts=76561198095468380 |
+| `-bCanVoiceChat=` | Enable/Disable Voice Chat | -bCanVoiceChat=true |
 | `-bCanChat=` | Enable/Disable Chat | -bCanChat=true |
+| `-NoticeAllEnable=` | Enable/Disable Join/Leave Message | -NoticeAllEnable=true |
+| `-NoticeEnterServer=` | Joining Message | -NoticeEnterServer=" has joined the Server" |
+| `-NoticeLeaveServer=` | Leaving Message | -NoticeLeaveServer=" has left the Server" |
+| `-SaveGameIntervalMinute=` | Server Save Intervall in Minutes | -SaveGameIntervalMinute=10 |
 
 
 You can find all other Server Settings in the "PrivateServerTool" and try around for yourself but it seems that not all Settings work or take affect.
