@@ -18,7 +18,7 @@ namespace WindowsGSM.Plugins
             name = "WindowsGSM.MythofEmpires", // WindowsGSM.XXXX
             author = "Sarpendon",
             description = "WindowsGSM plugin for supporting Myth of Empires Dedicated Server",
-            version = "1.5",
+            version = "1.6",
             url = "https://github.com/dkdue/WindowsGSM.MythofEmpires", // Github repository link (Best practice)
             color = "#AD2D89" // Color Hex
         };
@@ -43,10 +43,10 @@ namespace WindowsGSM.Plugins
 
         // - Game server default values
         public string Port = "7777"; // Default port
-        public string QueryPort = "7778"; // Default query port
+        public string QueryPort = "7779"; // Default query port
         public string Defaultmap = "LargeTerrain_Central_Main"; // Used for Server ID
         public string Maxplayers = "100"; // Default maxplayers
-        public string Additional = " -game -server -DataLocalFile -log log=123456.log -LOCALLOGTIMES -PrivateServer -disable_qim -SessionName=MyNewServer -GameServerPVPType=1 -MapDifficultyRate=1 -UseBatEye -ForceSteamNet -ServerId=100 -ClusterId=1 -ServerAdminAccounts=123456"; // Additional server start parameter
+        public string Additional = " log=123456.log -GameServerPVPType=1 -MapDifficultyRate=1 -UseBatEye -ForceSteamNet -ServerId=100 -ClusterId=1 -ServerAdminAccounts=123456 -Description="gdfgsergdfg" "; // Additional server start parameter
 
 
         // - Create a default cfg for the game server after installation
@@ -68,9 +68,12 @@ namespace WindowsGSM.Plugins
             string shipExePath = Functions.ServerPath.GetServersServerFiles(_serverData.ServerID, StartPath);
 
             // Prepare start parameter
-			string param = $"LargeTerrain_Central_Main"; // Set basic parameters
-			param += string.IsNullOrWhiteSpace(_serverData.ServerMap) ? string.Empty : $" {_serverData.ServerMap}"; 
-			param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $" {_serverData.ServerParam}"; 
+			string param = $""; // Set basic parameters
+			param += string.IsNullOrWhiteSpace(_serverData.ServerMap) ? string.Empty : $" {_serverData.ServerMap}";
+			param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $"-game -server -DataLocalFile -log -LOCALLOGTIMES -PrivateServer -disable_qim";
+			param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $" {_serverData.ServerParam}";
+			param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $" -SessionName={_serverData.ServerName}";
+			param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $" -PrivateServerPassword={_serverData.ServerGSLT}";
 			param += string.IsNullOrWhiteSpace(_serverData.ServerIP) ? string.Empty : $" -MultiHome={_serverData.ServerIP}";
 			param += string.IsNullOrWhiteSpace(_serverData.ServerIP) ? string.Empty : $" -OutAddress={externalIp.ToString()}";
 			param += string.IsNullOrWhiteSpace(_serverData.ServerMaxPlayer) ? string.Empty : $" -MaxPlayers={_serverData.ServerMaxPlayer}";
