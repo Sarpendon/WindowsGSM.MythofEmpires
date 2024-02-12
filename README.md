@@ -18,12 +18,10 @@
 # Requirements
 🖥️ WindowsGSM >= 1.21.0
 
-# IMPORTANT INFO / Troubleshooting
-- Don't forget to add your steam user credentials before installing the Server and Send the SteamGuard Token if necessary.
-- After installation change the log=123456.log to an random number or generate a number from the "PrivateServerTool".
-- Change -SessionName=MyNewServer to what ever your Server should show up in the Server List.
+# IMPORTANT INFO / Troubleshooting / Basic Server Settings:
+![alt text](https://i.imgur.com/KIiizY9.png)
 - To give yourself and/or others Admin acces add the Steam ID's after -ServerAdminAccounts=XXXXXXXXXXXXXXXXXX and separate with ";" if there are multiple admins.
-- In case of Error Code 8 or 7 just retry the installation, somethimes it needs several attempts to install properly.
+
 
 # Other Server Settings:
 I made a list of all Server Parameters and a Spreadsheet to easaly copy and paste a string to your Server.
