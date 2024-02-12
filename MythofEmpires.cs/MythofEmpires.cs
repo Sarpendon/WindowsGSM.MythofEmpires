@@ -18,13 +18,13 @@ namespace WindowsGSM.Plugins
             name = "WindowsGSM.MythofEmpires", // WindowsGSM.XXXX
             author = "Sarpendon",
             description = "WindowsGSM plugin for supporting Myth of Empires Dedicated Server",
-            version = "1.4",
+            version = "1.5",
             url = "https://github.com/dkdue/WindowsGSM.MythofEmpires", // Github repository link (Best practice)
-            color = "#34c9eb" // Color Hex
+            color = "#AD2D89" // Color Hex
         };
 
         // - Settings properties for SteamCMD installer
-        public override bool loginAnonymous => false;
+        public override bool loginAnonymous => true;
         public override string AppId => "1794810"; // Game server appId, Myth of Empires is 1794810
 
         // - Standard Constructor and properties
@@ -36,7 +36,7 @@ namespace WindowsGSM.Plugins
         // - Game server Fixed variables
         public override string StartPath => @"MOE\Binaries\Win64\MOEServer.exe"; // Game server start path
         public string FullName = "Myth of Empires Dedicated Server"; // Game server FullName
-        public bool AllowsEmbedConsole = true;  // Does this server support output redirect?
+        public bool AllowsEmbedConsole = false;  // Does this server support output redirect?
         public int PortIncrements = 2; // This tells WindowsGSM how many ports should skip after installation
         public object QueryMethod = new A2S(); // Query method should be use on current server type. Accepted value: null or new A2S() or new FIVEM() or new UT3()
 
