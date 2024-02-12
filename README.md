@@ -31,9 +31,9 @@
 
 > [!CAUTION]
 > Keep in mind to use quotes around texts that have spaces inbetween for example:
->**-Description="My Server is Awesome!"** 
+>- **-Description="My Server is Awesome!"** 
 >and not 
->-Description=My Server is Awesome!
+>- -Description=My Server is Awesome!
 
 > [!TIP]
 > To give yourself and/or others Admin acces add the Steam ID's after -ServerAdminAccounts=XXXXXXXXXXXXXXXXXX and separate with ";" if there are multiple admins.
