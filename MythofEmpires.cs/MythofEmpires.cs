@@ -70,7 +70,7 @@ namespace WindowsGSM.Plugins
             // Prepare start parameter
 			string param = $""; // Set basic parameters
 			param += string.IsNullOrWhiteSpace(_serverData.ServerMap) ? string.Empty : $" {_serverData.ServerMap}";
-			param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $"-game -server -DataLocalFile -log -LOCALLOGTIMES -PrivateServer -disable_qim";
+			param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $" -game -server -DataLocalFile -log -LOCALLOGTIMES -PrivateServer -disable_qim";
 			param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $" {_serverData.ServerParam}";
 			param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $" -SessionName={_serverData.ServerName}";
 			param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $" -PrivateServerPassword={_serverData.ServerGSLT}";
