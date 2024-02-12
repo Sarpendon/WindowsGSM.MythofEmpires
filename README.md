@@ -29,8 +29,6 @@
 >- **Server GSLT:** *If you want to have a Server Password enter it here or leave empty for no Server Password!*
 >- **Server Start Param:** *Some Parameter are already filled in by default you can add or remove them as you wish! 
 
-![alt text](https://i.imgur.com/vXZVL4x.png)
-
 > [!CAUTION]
 > Keep in mind to use quotes around texts that have spaces inbetween for example:
 
@@ -43,9 +41,17 @@ and not
 > To give yourself and/or others Admin acces add the Steam ID's after -ServerAdminAccounts=XXXXXXXXXXXXXXXXXX and separate with ";" if there are multiple admins.
 
 # Other Server Settings:
-| Server Start Param| Description | Default Value |
+| Server Start Param| Description | Example Value |
 | --- | --- | --- |
-| `-ServerId=` | Id of the Server itself | 100 |
-| `-ClusterId=` | ID of the Cluster the Server belongs to | 1 |
+| `-ServerId=` | Id of the Server itself | -ServerId=100 |
+| `-ClusterId=` | ID of the Cluster the Server belongs to | -ClusterId=1 |
+| `-Description=` | Short Description of the Server | -Description="join my new Server" |
+| `-GameServerPVPType=` | PVP(0) / PVE(1) | -GameServerPVPType=1 |
+| `-NoticeSelfEnable=` | Enable/Disable Welcome Text | -NoticeSelfEnable=true |
+| `-NoticeSelfEnterServer=` | Welcome text when joining the Server | NoticeSelfEnterServer="Welcome to my Server!" |
+| `-MapDifficultyRate=` | Strength & HP of NPC's and Animals | -MapDifficultyRate=1 |
+| `-ServerAdminAccounts=` | Steam ID of Admin Players | -ServerAdminAccounts=76561198095468380 |
+| `-bCanChat=` | Enable/Disable Chat | -bCanChat=true |
+
 
 You can find all other Server Settings in the "PrivateServerTool" and try around for yourself but it seems that not all Settings work or take affect.
