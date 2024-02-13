@@ -7,6 +7,7 @@ using WindowsGSM.GameServer.Engine;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Collections.Generic;
 
 namespace WindowsGSM.Plugins
 {
@@ -138,21 +139,21 @@ namespace WindowsGSM.Plugins
             }
         }
 
-
 		// - Stop server function
      public async Task Stop(Process p)
 		{
 			await Task.Run(() =>
 			{
 				Functions.ServerConsole.SetMainWindow(p.MainWindowHandle);
-				Functions.ServerConsole.SendWaitToMainWindow("SaveGame"); // Execute SaveGame command
-				System.Threading.Thread.Sleep(10000); // Wait for 10 seconds (in milliseconds)
+				Functions.ServerConsole.SendWaitToMainWindow("SaveWorld"); // Execute SaveGame command
+				System.Threading.Thread.Sleep(5000); // Wait for 10 seconds (in milliseconds)
 				Functions.ServerConsole.SendWaitToMainWindow("^c"); // Send Ctrl+C command
-				p.WaitForExit(10000);
+				p.WaitForExit(5000);
 			});
 		}
 
-// fixes WinGSM bug, https://github.com/WindowsGSM/WindowsGSM/issues/57#issuecomment-983924499
+
+        // - Update server function
         public async Task<Process> Update(bool validate = false, string custom = null)
         {
             var (p, error) = await Installer.SteamCMD.UpdateEx(serverData.ServerID, AppId, validate, custom: custom, loginAnonymous: loginAnonymous);
@@ -161,5 +162,28 @@ namespace WindowsGSM.Plugins
             return p;
         }
 
+        public bool IsInstallValid()
+        {
+            return File.Exists(Functions.ServerPath.GetServersServerFiles(_serverData.ServerID, StartPath));
+        }
+
+        public bool IsImportValid(string path)
+        {
+            string exePath = Path.Combine(path, "PackageInfo.bin");
+            Error = $"Invalid Path! Fail to find {Path.GetFileName(exePath)}";
+            return File.Exists(exePath);
+        }
+
+        public string GetLocalBuild()
+        {
+            var steamCMD = new Installer.SteamCMD();
+            return steamCMD.GetLocalBuild(_serverData.ServerID, AppId);
+        }
+
+        public async Task<string> GetRemoteBuild()
+        {
+            var steamCMD = new Installer.SteamCMD();
+            return await steamCMD.GetRemoteBuild(AppId);
+        }
     }
 }
