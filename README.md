@@ -16,7 +16,8 @@
 
 
 # The Game:
-🕹️ https://store.steampowered.com/app/1371580/Myth_of_Empires/
+- 🕹️**Steam Site:** https://store.steampowered.com/app/1371580/Myth_of_Empires/
+- 📁**Homepage:** https://www.mythofempires.com/
 
 # Requirements:
 - 🖥️ WindowsGSM >= 1.21.0
