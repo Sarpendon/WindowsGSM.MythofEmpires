@@ -4,7 +4,7 @@
 🏷️ To be used with https://windowsgsm.com/ 
 
 > [!CAUTION]
-> I couldn't find a way to gracefully save and shut down the server so either set the Saveintervall to a lower time or set the restart time to a matching time after an auto save of the server!
+> I was unable to identify a method for a graceful server shutdown. Therefore, I recommend either reducing the save interval or synchronizing the restart time with the server’s auto-save schedule.
 
 # Basic Installation: 
 1. Download  WindowsGSM from the Link above.
