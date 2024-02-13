@@ -3,6 +3,9 @@
 
 🏷️ To be used with https://windowsgsm.com/ 
 
+> [!CAUTION]
+> I couldn't find a way to gracefully save and shut down the server so either set the Saveintervall to a lower time or set the restart time to a matching time after an auto save of the server!
+
 # Basic Installation: 
 1. Download  WindowsGSM from the Link above.
 2. Download this Plugin as .zip container and don't unpack it.
@@ -17,6 +20,7 @@
 
 # Requirements:
 🖥️ WindowsGSM >= 1.21.0
+📟 RAM Usage is currently high at around 10-12 GB while beeing empty.
 
 # Server Settings:
 > [!IMPORTANT]
