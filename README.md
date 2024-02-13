@@ -21,7 +21,7 @@
 
 # Requirements:
 - 🖥️ **WindowsGSM** >= 1.21.0
-- 📟 The **RAM usage is currently high**, approximately around 10-12GB, with no active players. Please prepare accordingly.
+- 📟 The **RAM usage is currently high**, approximately around 10-12 GB, with no active players. Please prepare accordingly.
 
 # Server Settings:
 > [!IMPORTANT]
