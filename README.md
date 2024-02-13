@@ -3,6 +3,9 @@
 
 🏷️ To be used with https://windowsgsm.com/ 
 
+> [!CAUTION]
+> I was unable to identify a method for a graceful server shutdown. Therefore, I recommend either reducing the save interval or synchronizing the restart time with the server’s auto-save schedule.
+
 # Basic Installation: 
 1. Download  WindowsGSM from the Link above.
 2. Download this Plugin as .zip container and don't unpack it.
@@ -13,10 +16,12 @@
 
 
 # The Game:
-🕹️ https://store.steampowered.com/app/1371580/Myth_of_Empires/
+- 🕹️ **Steam Site:** https://store.steampowered.com/app/1371580/Myth_of_Empires/
+- 📁 **Homepage:** https://www.mythofempires.com/
 
 # Requirements:
-🖥️ WindowsGSM >= 1.21.0
+- 🖥️ **WindowsGSM** >= 1.21.0
+- 📟 The **RAM usage is currently high**, approximately around 10-12 GB, with no active players. Please prepare accordingly.
 
 # Server Settings:
 > [!IMPORTANT]
