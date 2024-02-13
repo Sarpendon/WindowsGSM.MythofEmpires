@@ -19,8 +19,8 @@
 🕹️ https://store.steampowered.com/app/1371580/Myth_of_Empires/
 
 # Requirements:
-🖥️ WindowsGSM >= 1.21.0
-📟 RAM Usage is currently high at around 10-12 GB while beeing empty.
+- 🖥️ WindowsGSM >= 1.21.0
+- 📟 The RAM usage is currently high, approximately around 10-12GB, with no active players. Please prepare accordingly.
 
 # Server Settings:
 > [!IMPORTANT]
