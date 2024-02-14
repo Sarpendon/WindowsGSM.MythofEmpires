@@ -21,7 +21,7 @@ namespace WindowsGSM.Plugins
             description = "WindowsGSM plugin for supporting Myth of Empires Dedicated Server",
             version = "1.9",
             url = "https://github.com/Sarpendon/WindowsGSM.MythofEmpires", // Github repository link (Best practice)
-            color = "#AD2D89" // Color Hex
+            color = "#8802db" // Color Hex
         };
 
         // - Settings properties for SteamCMD installer
