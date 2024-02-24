@@ -45,9 +45,9 @@ namespace WindowsGSM.Plugins
         // - Game server default values
         public string Port = "7777"; // Default port
         public string QueryPort = "7779"; // Default query port
-        public string Defaultmap = "LargeTerrain_Central_Main"; // Used for Server ID
+        public string Defaultmap = "LargeTerrain_Central2_Main"; // Used for Server ID
         public string Maxplayers = "100"; // Default maxplayers
-        public string Additional = " -ServerId=100 -ClusterId=1 -ServerAdminAccounts=insert_steam_id_here -Description=please_use_quotation_marks_around_text -SaveGameIntervalMinute=10 "; // Additional server start parameter
+        public string Additional = "-game -server -DataLocalFile -NotCheckServerSteamAuth -log log=123456.log -LOCALLOGTIMES -PrivateServer -disable_qim -UseACE -EnableVACBan=1 -ServerId=100 -ClusterId=1 -bStartShutDownServiceInPrivateServer=true -ShutDownServiceIP=127.0.0.1 -ShutDownServicePort=13888 -ShutDownServiceKey=302172 -ServerAdminAccounts=insert_steam_id_here -Description=please_use_quotation_marks_around_text -SaveGameIntervalMinute=10 "; // Additional server start parameter
 
 
         // - Create a default cfg for the game server after installation
@@ -72,10 +72,8 @@ namespace WindowsGSM.Plugins
             // Prepare start parameter
 			string param = $""; // Set basic parameters
 			param += string.IsNullOrWhiteSpace(_serverData.ServerMap) ? string.Empty : $" {_serverData.ServerMap}";
-			param += string.IsNullOrWhiteSpace(_serverData.ServerParam) ? string.Empty : $" -game -server -DataLocalFile -log log={_serverData.ServerPort}.log -LOCALLOGTIMES -PrivateServer -disable_qim";
 			param += string.IsNullOrWhiteSpace(_serverData.ServerIP) ? string.Empty : $" -MultiHome={_serverData.ServerIP}";
 			param += string.IsNullOrWhiteSpace(_serverData.ServerIP) ? string.Empty : $" -OutAddress={externalIp.ToString()}";
-			param += string.IsNullOrWhiteSpace(_serverData.ServerPort) ? string.Empty : $" -pakdir=*\'..\\WindowsPrivateServer\\MOE\\{_serverData.ServerPort}Mods\'*";
 			param += string.IsNullOrWhiteSpace(_serverData.ServerName) ? string.Empty : $" -SessionName=\"{_serverData.ServerName}\"";
 			param += string.IsNullOrWhiteSpace(_serverData.ServerGSLT) ? string.Empty : $" -PrivateServerPassword={_serverData.ServerGSLT}";
 			param += string.IsNullOrWhiteSpace(_serverData.ServerMaxPlayer) ? string.Empty : $" -MaxPlayers={_serverData.ServerMaxPlayer}";
