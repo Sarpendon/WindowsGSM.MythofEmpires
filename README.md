@@ -25,7 +25,8 @@
 
 # Server Settings:
 > [!CAUTION]
-> Please change the log=123456.log to any number you want don't leave it at 123456! Also check the the other Ports and Parameters to be sure everything works as it should! 
+> Please change the log=123456.log to any number you want don't leave it at 123456! Also check the the other Ports and Parameters to be sure everything works as it should!
+
 > [!IMPORTANT]
 >- **Server Name:** *Fill in the Name of your Server in this Section*
 >- **Server IP Adress:** *Local IP of your Server there is no need to change this GSM should get the right IP adress itself*
