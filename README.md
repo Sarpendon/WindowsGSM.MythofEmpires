@@ -24,13 +24,15 @@
 - 📟 The **RAM usage is currently high**, approximately around 10-12 GB, with no active players. Please prepare accordingly.
 
 # Server Settings:
+> [!CAUTION]
+> Please change the log=123456.log to any number you want don't leave it at 123456! Also check the the other Ports and Parameters to be sure everything works as it should! 
 > [!IMPORTANT]
 >- **Server Name:** *Fill in the Name of your Server in this Section*
 >- **Server IP Adress:** *Local IP of your Server there is no need to change this GSM should get the right IP adress itself*
 >- **Server Port:** *Game Port of the Server*
 >- **Server Query Port:** *Is actually the RCON Port of the Server*
 >- **Server Maxplayer:** *Maximum Number of Players on your Server*
->- **Server Start Map:** *Enter the Name of the Map the Server should start. If there will be more maps in the future you can change them here.*
+>- **Server Start Map:** *Enter the Name of the Map the Server should start. LargeTerrain_Central_Main = Old Map and LargeTerrain_Central2_Main = New Map
 >- **Server GSLT:** *If you want to have a Server Password enter it here or leave empty for no Server Password!*
 >- **Server Start Param:** *Some Parameter are already filled in by default you can add or remove them as you wish! 
 
