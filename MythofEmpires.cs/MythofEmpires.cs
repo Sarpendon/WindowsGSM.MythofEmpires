@@ -61,7 +61,7 @@ namespace WindowsGSM.Plugins
         {
 
 			//Get WAN IP from net
-            string externalIpString = new WebClient().DownloadString("http://icanhazip.com").Replace("\\r\\n", "").Replace("\\n", "").Trim();
+            string externalIpString = new WebClient().DownloadString("http://ipv4.icanhazip.com/").Replace("\\r\\n", "").Replace("\\n", "").Trim();  //directly use ipv4 endpoint, as windowsgsm can't handle ipv6 anyway
             var externalIp = IPAddress.Parse(externalIpString);
 
 
