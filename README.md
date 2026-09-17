@@ -3,8 +3,11 @@
 
 🏷️ To be used with https://windowsgsm.com/ 
 
-> [!CAUTION]
-> I was unable to identify a method for a graceful server shutdown. Therefore, I recommend either reducing the save interval or synchronizing the restart time with the server’s auto-save schedule.
+> [!NOTE]
+> Since plugin version 2.0 the server is asked to shut down cleanly instead of being killed: the
+> stop signal is raised on the server's own console, which reaches it even though WindowsGSM hides
+> the server window. Lowering `-SaveGameIntervalMinute` or lining restarts up with the auto-save is
+> no longer required, though it does no harm.
 
 # Basic Installation: 
 1. Download  WindowsGSM from the Link above.
@@ -67,10 +70,40 @@
 
 You can find all other Server Settings in the "PrivateServerTool" and try around for yourself but it seems that not all Settings work or take affect.
 
+# Changelog:
+### 2.0
+- **WindowsGSM no longer freezes - or crashes - when starting a server.** The public IP lookup for
+  `-OutAddress` ran on the calling thread with no error handling, so the window locked up for the
+  length of the request on every start, and any failure (no connectivity, DNS, the lookup service
+  being down) threw straight out and took WindowsGSM down with it. It now runs off the calling
+  thread with a 5 second timeout, over HTTPS, and a failure simply starts the server without
+  `-OutAddress` instead of not starting at all.
+- **There is a graceful shutdown now.** The note about not having one no longer applies - see the
+  first shared point below. The old stop path also sent the literal text `SaveWorld` through
+  SendKeys, which meant it was typed into whatever window was in focus on the host machine.
+- **Stopping the server now reaches it.** The stop signal was sent to the server's window with
+  SendKeys, but WindowsGSM hides that window right after starting the server - so the keystroke
+  went to whatever window happened to have focus on the machine, never to the server. Every stop
+  ran into the timeout and ended in a hard kill. The signal is now raised on the server's own
+  console, so it shuts down properly instead of being killed.
+- The shutdown output stays readable for a few seconds instead of being cleared instantly.
+- **Failed installs and updates now say why.** The reason was being swallowed and shown as an
+  empty `[ERROR]`; a failed update additionally crashed with a `NullReferenceException`.
+- **Importing an existing server works.** It was looking for `PackageInfo.bin`, a file this game
+  does not ship, so the import always failed.
+- A missing server executable is reported as such instead of a generic Windows error.
+- Console output is read as UTF-8, so umlauts and other non-ASCII characters are no longer mangled.
+- Port step per installed server is 3 instead of 2. With the game port at 7777 and the shutdown
+  service at 7779, a second server installed straight after the first was handed 7779 as its game
+  port - the first server's shutdown service port.
+- `-ShutDownServicePort` was in the default Start Parameters *and* built from the Server Query
+  Port. The one built from the server settings is placed first and wins, so the duplicate has been
+  removed from the defaults. New servers only; existing ones keep their parameters.
+
 # Other WinGSM Plugins:
 | Icon | Game Name | Link | Version |
 | --- | --- | --- | --- |
-| <img src="https://i.imgur.com/LI1uPIJ.png" width="100" height="100"> | Myth of Empires Dedicated Server | [GitHub Link](https://github.com/Sarpendon/WindowsGSM.MythofEmpires) | 1.9 |
-| <img src="https://i.imgur.com/25x4Ohs.png" width="100" height="100"> | Valheim Dedicated Server | [GitHub Link](https://github.com/Sarpendon/WindowsGSM.Valheim) | 1.1 |
-| <img src="https://i.imgur.com/A9jtLPQ.png" width="100" height="100"> | V Rising Dedicated Server | [GitHub Link](https://github.com/Sarpendon/WindowsGSM.VRising) | 1.0 |
-| <img src="https://i.imgur.com/A6dCSy9.png" width="100" height="100"> | Life is Feudal Dedicated Server | [GitHub Link](https://github.com/Sarpendon/WindowsGSM.LifeIsFeudal) | 1.0 |
+| <img src="https://i.imgur.com/LI1uPIJ.png" width="100" height="100"> | Myth of Empires Dedicated Server | [GitHub Link](https://github.com/Sarpendon/WindowsGSM.MythofEmpires) | 2.0 |
+| <img src="https://i.imgur.com/25x4Ohs.png" width="100" height="100"> | Valheim Dedicated Server | [GitHub Link](https://github.com/Sarpendon/WindowsGSM.Valheim) | 1.2 |
+| <img src="https://i.imgur.com/A9jtLPQ.png" width="100" height="100"> | V Rising Dedicated Server | [GitHub Link](https://github.com/Sarpendon/WindowsGSM.VRising) | 1.1 |
+| <img src="https://i.imgur.com/A6dCSy9.png" width="100" height="100"> | Life is Feudal Dedicated Server | [GitHub Link](https://github.com/Sarpendon/WindowsGSM.LifeIsFeudal) | 1.2 |
